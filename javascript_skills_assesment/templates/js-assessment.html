@@ -49,7 +49,7 @@
   const signIn = document.querySelector('#signIn');
   
   const logOut = () => {
-    if (signIn.innerHTML === "Log In" ) {
+    if (signIn === "Log In" ) {
         signIn.innerHTML = "Log Out";
     }else {
       signIn.innerHTML = "Log Out";
@@ -164,6 +164,7 @@
 
 <script>
   "use strict";
+  // When the user double clicks the attribute will change to a dog image
     
     $('#kittenz-rule').on('dblclick', () => {
       $('#kittenz-rule').attr('src', 'http://www.cabinhilllabradoodles.com/uploads/9/9/6/3/99635076/20190310-152922_orig.jpg')
@@ -216,8 +217,22 @@ You may use <b>plain JavaScript</b> and <b>jQuery</b> for this problem. Do not u
 </p>
 
 <script>
-  "use strict";
-  // code here for above problem
+ // When the calculate button is clicked the factorialCalc function is executed
+  $('#calculate').on('click', () => {
+    // Factorial calculator 
+
+    let number = $('#number').val(); 
+    // the input will be turned to a value instead of taking in a string
+    let num = 1 
+
+    while (number >= 1){
+      num = num * number ; 
+      number -= 1 ; 
+      // line 231 will add the num (result of calculation) to the result span
+       $('#result').html(num); 
+    }
+  });
+
 </script>
 
 <!-- /////////////////////////////////////////////////////////////////////// -->
