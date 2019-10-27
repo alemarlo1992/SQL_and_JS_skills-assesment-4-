@@ -48,16 +48,14 @@
   
   const signIn = document.querySelector('#signIn');
   
-  const logOut = () => {
-    if (signIn === "Log In" ) {
+  signIn.addEventListener('click', () => {
+    if (signIn.innerHTML === "Log In" ) {
         signIn.innerHTML = "Log Out";
     }else {
-      signIn.innerHTML = "Log Out";
+      signIn.innerHTML = "Log In";
     }
-  }
+  })
 
-  signIn.addEventListener('click', logOut);
-  
 
 </script>
 
